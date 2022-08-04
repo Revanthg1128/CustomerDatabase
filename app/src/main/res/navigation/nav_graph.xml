@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CustomerFragment">
+
+    <fragment
+        android:id="@+id/CustomerFragment"
+        android:name="com.sample.customerdatabase.ui.customerfragment.CustomerFragment"
+        android:label="@string/customers"
+        tools:layout="@layout/fragment_customer">
+
+        <action
+            android:id="@+id/action_CustomerFragment_to_AddCustomerFragment"
+            app:destination="@id/AddCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddCustomerFragment"
+        android:name="com.sample.customerdatabase.ui.addcustomerfragment.AddCustomerFragment"
+        android:label="@string/add_customer_screen"
+        tools:layout="@layout/fragment_add_customer" />
+</navigation>
